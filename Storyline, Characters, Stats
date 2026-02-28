@@ -1,8 +1,9 @@
 # Storyline, Backstory and Character Stats
 
+Title: Encantadia: Origin of the Gems (Tentative: Subject to change)
 
 Storyline:
-  Peace in Encantadia was never meant to last.
+Peace in Encantadia was never meant to last.
 After the fall of the previous conflict, the elemental Brilyantes began to resonate with an unfamiliar pulse—one that echoed loss rather than power. The Goddesses Jelian and Joygen, guardians of whispers and flame, vanished without a trace. In their absence, the balance of the realms fractured.
 The skies grew unstable. The oceans lost their rhythm. The land cracked with unrest.
 Sensing a greater catastrophe, the Sang’gres—Amihan, Alena, Danaya, and Perina—reunited with the ancient guardians Dirk and Mary. Their journey revealed a forbidden truth: Jelian and Joygen were imprisoned within a sealed dimension known as the Gem Void, a realm born from corrupted Brilyante energy.
@@ -19,16 +20,16 @@ Backstory and Character Stats
 Claire, Goddess of Tides
   Born of moon and sea, Mary governs rhythm and balance. She feels Joygen’s absence as a broken tide—an imbalance that threatens to drown Encantadia itself.
 
-Base HP: 3000 HP
+Base HP: 5000 HP
 Skill 1: Luha – Damage: 200–300 | Cooldown: 0
 Skill 2: Flood Control – Damage: 250–350 | Cooldown: 2 turns
-Skill 3: Tsunami – Damage: 500–700 | Cooldown: 3 turns | Ultimate Effect: 65% chance to steal a turn
+Skill 3: Tsunami – Damage: 375–650 | Cooldown: 3 turns | Ultimate Effect: 65% chance to steal a turn
 
 
 Dirk, Guardian of Growth and Harvest
   Emerging from the heart of the mountains, Dirk protects the land with unwavering devotion. With the Brilyantes destabilizing, his strength becomes a shield for those who cannot endure the collapse alone.
 
-Base HP: 3000 HP
+Base HP: 5000 HP
 Skill 1: Bato Dela Rosa – Damage: 220–320 | Cooldown: 0
 Skill 2: Ding ang Bato! – Damage: 250–350 | Cooldown: 2 turns
 Skill 3: Linog – Damage: 450–650 | Cooldown: 3 turns | Ultimate Effect: Reduces the opponents turn of attack by 40%
@@ -41,11 +42,36 @@ Skill 3: Linog – Damage: 450–650 | Cooldown: 3 turns | Ultimate Effect: Redu
 Amihan (Air)
   Born of the northern winds, Amihan commands the skies with grace and authority. Calm yet vigilant, she senses disturbances long before they manifest. The disappearance of Jelian haunts her, as whispers once carried by the wind now fall silent.
 
-Base HP: 3000HP
-Skill 1: Gale Slice – Damage: 200–300 | Cooldown: 0
-Skill 2: Tempest Veil – Damage: 150–250 | Cooldown: 2 turns
-Skill 3: Skyfall Dominion – Damage: 400–600 | Cooldown: 3 turns | Ultimate effect: 
-  
+Base HP: 5000HP
+Skill 1: Wind Slash – Damage: 200–300 | Cooldown: 0
+Skill 2: Storm Fury – Damage: 150–250 | Cooldown: 2 turns
+Skill 3: Whirlwind – Damage: 400–600 | Cooldown: 3 turns | Ultimate effect: Throws additional damage of 30
+
+Pirena (Fire)
+  Cursed with starlit fire, Perina’s strength burns brightest through will and passion. Joygen’s absence weakens her flames, yet fuels her resolve to rescue the goddess who once guided her control.
+
+Base HP: 5000HP
+Skill 1: Fire ball – Damage: 300–400 | Cooldown: 0
+Skill 2: Flame burst – Damage: 350–500 | Cooldown: 2 turns
+Skill 3: Inferno Strike – Damage: 600–800 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 30
+
+Danaya (Earth)
+  Born from the first stone touched by sunlight, Danaya embodies endurance. The land cries out to her, fractured and unstable without Jelian’s guiding whispers.
+
+Base HP: 5000HP
+Skill 1: Rock Smash – Damage: 250–350 | Cooldown: 0
+Skill 2: Earthquake – Damage: 200–300 | Cooldown: 2 turns
+Skill 3: Nature's Wrath – Damage: 500–650 | Cooldown: 3 turns | Ultimate Effect: Has a healing effect of 150 HP
+
+Alena (Water)
+  Gifted with a voice that could soothe storms, Alena carries compassion shaped by betrayal and loss. The oceans mourn with her, reacting violently to Joygen’s absence, as fire and water lose their ancient harmony.
+
+Base HP: 5000HP
+Skill 1: Water Spear – Heal: 200–300 | Cooldown: 0
+Skill 2: Ocean Wave – Heal: 300–450 | Cooldown: 2 turns
+Skill 3: Tsunami Blast – Heal: 600–800 | Cooldown: 3 turns | Ultimate Effect: Decreases all skill turns by 1, except skill 1
+
+
 
 
 
