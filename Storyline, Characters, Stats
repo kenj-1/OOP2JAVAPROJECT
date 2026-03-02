@@ -39,34 +39,34 @@ Skill 3: Linog – Damage: 450–650 | Cooldown: 3 turns | Ultimate Effect: Redu
 // here
 
 (Main):
-Amihan (Air)
-  Born of the northern winds, Amihan commands the skies with grace and authority. Calm yet vigilant, she senses disturbances long before they manifest. The disappearance of Jelian haunts her, as whispers once carried by the wind now fall silent.
+Dea (Air)
+Born of the northern winds and nurtured by the whispers of the sky, Dea commands the currents with precision and foresight. Calm and observant, she senses disturbances across the realms long before they manifest. The disappearance of Jelian weighs heavily on her, as the winds now carry only silence where once they carried guidance.
 
-Base HP: 5000HP
+Base HP: 5000 HP
 Skill 1: Wind Slash – Damage: 200–300 | Cooldown: 0
 Skill 2: Storm Fury – Damage: 150–250 | Cooldown: 2 turns
 Skill 3: Whirlwind – Damage: 400–600 | Cooldown: 3 turns | Ultimate effect: Incrementing opponents cooldown by 1 turn
 
-Pirena (Fire)
-  Cursed with starlit fire, Perina’s strength burns brightest through will and passion. Joygen’s absence weakens her flames, yet fuels her resolve to rescue the goddess who once guided her control.
+Flamara (Fire)
+Gifted with flames born from starlit embers, Flamara’s fire burns with a fierce, unyielding passion. The absence of Joygen dims the brilliance of her power, yet it strengthens her resolve to rescue the goddess who once taught her the true mastery of fire.
 
-Base HP: 5000HP
-Skill 1: Fire ball – Damage: 300–400 | Cooldown: 0
-Skill 2: Flame burst – Damage: 350–500 | Cooldown: 2 turns
+Base HP: 5000 HP
+Skill 1: Fire Ball – Damage: 300–400 | Cooldown: 0
+Skill 2: Flame Burst – Damage: 350–500 | Cooldown: 2 turns
 Skill 3: Inferno Strike – Damage: 530–700 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 500
 
-Danaya (Earth)
-  Born from the first stone touched by sunlight, Danaya embodies endurance. The land cries out to her, fractured and unstable without Jelian’s guiding whispers.
+Tera (Earth)
+Tera was born from the first mountain stone kissed by dawn, embodying endurance and the unyielding spirit of the land. With Jelian missing, the earth cries out in instability, yet Tera’s steadfast nature ensures she remains the shield that guards against total collapse.
 
-Base HP: 5000HP
+Base HP: 5000 HP
 Skill 1: Rock Smash – Damage: 250–350 | Cooldown: 0
 Skill 2: Earthquake – Damage: 200–300 | Cooldown: 2 turns
 Skill 3: Nature's Wrath – Damage: 500–650 | Cooldown: 3 turns | Ultimate Effect: Has a healing effect of 300 HP
 
-Alena (Water)
-  Gifted with a voice that could soothe storms, Alena carries compassion shaped by betrayal and loss. The oceans mourn with her, reacting violently to Joygen’s absence, as fire and water lose their ancient harmony.
+Adamus (Water)
+Adamus, guardian of rivers and lakes, carries the voice of the oceans themselves. Shaped by betrayal and loss, he channels both compassion and power. The oceans wail in response to Joygen’s absence, yet Adamus remains resolute, determined to restore harmony to water and fire alike.
 
-Base HP: 5000HP
+Base HP: 5000 HP
 Skill 1: Water Spear – Heal: 200–300 | Cooldown: 0
 Skill 2: Ocean Wave – Heal: 300–450 | Cooldown: 2 turns
 Skill 3: Tsunami Blast – Heal: 600–700 | Cooldown: 3 turns | Ultimate Effect: Decreases all skill turns by 1, except skill 1
