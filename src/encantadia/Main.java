@@ -11,5 +11,8 @@ public class Main{
     public static void main(String[] x){
         
         MMF.showMainMenu();
+
+        System.out.println("Reall");
+
     }
 }
