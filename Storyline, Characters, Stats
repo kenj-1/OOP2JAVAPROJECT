@@ -1,18 +1,28 @@
 # Storyline, Backstory and Character Stats
 
-Title: Encantadia: Origin of the Gems (Tentative: Subject to change)
+Title: Encantadia: Echoes of the Gem
+Team Name: UXérs
 
 Storyline:
-Peace in Encantadia was never meant to last.
-After the fall of the previous conflict, the elemental Brilyantes began to resonate with an unfamiliar pulse—one that echoed loss rather than power. The Goddesses Jelian and Joygen, guardians of whispers and flame, vanished without a trace. In their absence, the balance of the realms fractured.
-The skies grew unstable. The oceans lost their rhythm. The land cracked with unrest.
-Sensing a greater catastrophe, the Sang’gres—Amihan, Alena, Danaya, and Perina—reunited with the ancient guardians Dirk and Mary. Their journey revealed a forbidden truth: Jelian and Joygen were imprisoned within a sealed dimension known as the Gem Void, a realm born from corrupted Brilyante energy.
-To rescue them, two new warriors rise—beings born not of divinity, but of sacrifice—chosen by the Gems themselves.
-Now bound by fate, the eight must venture into collapsing realms, confront twisted elemental manifestations, and restore balance before Encantadia is consumed by its own power.
-
-
+Encantadia was once saved by four legendary Sang’gres.
+When darkness kidnapped their Queen and threatened the Brilyantes, Amihan, Alena, Danaya, and Perina rose as protectors of their elements. Through sacrifice and unity, they restored balance to Lireo, Sapiro, Adamya, and Hathoria. Peace returned. But peace, like power, is never permanent. Years after the era of the Four, the Brilyantes began to change. They no longer weakened. They evolved. The elemental gems started resonating beyond royal blood, reacting to emotions across the realms—rage, grief, ambition, fear. The power once bound to queens now answered to something deeper: imbalance within Encantadia itself. Then the unthinkable occurred. The Goddesses Jelian and Joygen vanished. Without divine oversight, the Brilyantes destabilized. Elemental energy clashed violently across the kingdoms. Storms tore through Lireo. Tides swallowed parts of Sapiro. Adamya’s lands cracked open. Flames in Hathoria burned without control.
+Ancient guardians Dirk and Mary uncovered a forbidden truth:
+A hidden dimension had formed from centuries of accumulated elemental strain—the Gem Void. A realm not created by enemies… but by the Brilyantes themselves. And within it, Jelian and Joygen were sealed—trapped by corrupted resonance. This time, the Brilyantes did not call upon the Sang’gres. They chose new bearers.
+Warriors from different paths.
+Not queens.
+Not heirs.
+But individuals whose sacrifices aligned with their element’s core.
+Flamara’s unyielding blaze.
+Dea’s relentless winds.
+Tera’s enduring strength.
+Adamus’ disciplined tides.
+Tyrone’s burning resolve.
+Claire’s flowing precision.
+Makelan’s dangerous fury.
+The age of royal guardianship had ended.
+This is the age of chosen resonance. As the eight rise, they do not replace the Sang’gres—they stand on their legacy. Statues of the Four still tower in the capitals. Songs of their battles echo in ceremonial halls. Their story remains sacred. But the new warriors face a different enemy. Not a rival. Not a kidnapper. But imbalance born from power itself. To save the Goddesses and prevent the Brilyantes from tearing Encantadia apart, they must enter the Gem Void—where elemental energy mutates, memories distort, and even legends can be corrupted.
+Because if the Void expands… Encantadia will not fall to darkness. It will collapse under the weight of its own magic.
 Characters:
-
 
 Backstory and Character Stats
 (Original):
@@ -21,59 +31,64 @@ Claire, Goddess of Tides
   Born of moon and sea, Mary governs rhythm and balance. She feels Joygen’s absence as a broken tide—an imbalance that threatens to drown Encantadia itself.
 
 Base HP: 5000 HP
-Skill 1: Luha – Damage: 200–300 | Cooldown: 0
-Skill 2: Flood Control – Damage: 250–350 | Cooldown: 2 turns
-Skill 3: Tsunami – Damage: 375–650 | Cooldown: 3 turns | Ultimate Effect: 50% chance to steal a turn
+Skill 1: Luha – Damage: 220–300 | Cooldown: 0
+Skill 2: Flood Control – Damage: 320–420 | Cooldown: 2 turns
+Skill 3: Tsunami – Damage: 525–650 | Cooldown: 3 turns | Ultimate Effect: 50% chance to steal a turn
 
 
 Dirk, Guardian of Growth and Harvest
   Emerging from the heart of the mountains, Dirk protects the land with unwavering devotion. With the Brilyantes destabilizing, his strength becomes a shield for those who cannot endure the collapse alone.
 
 Base HP: 5000 HP
-Skill 1: Bato Dela Rosa – Damage: 220–320 | Cooldown: 0
-Skill 2: Ding ang Bato! – Damage: 250–350 | Cooldown: 2 turns
-Skill 3: Linog – Damage: 450–650 | Cooldown: 3 turns | Ultimate Effect: Reduces enemy damage by 40% next turn
+Skill 1: Bato Dela Rosa – Damage: 230–310 | Cooldown: 0
+Skill 2: Ding ang Bato! – Damage: 300–400 | Cooldown: 2 turns
+Skill 3: Linog – Damage: 500–650 | Cooldown: 3 turns | Ultimate Effect: Reduces enemy damage by 40% next turn
 
-// here
 
-// here
+Makelan Shere, Devourer of the Crimson Bloom
+  Born of hunger and divine indulgence, Makelan embodies excess and consequence. He views battle as a feast and pain as a sacred offering. Each strike feeds his power, yet every overwhelming assault demands a price from his own flesh.
+
+Base HP: 5000 HP
+Skill 1: Lead Heel – Damage: 240–320 | Cooldown: 0
+Skill 2: Savor Thy Flesh – Damage: 340–450 | Cooldown: 2 turns 
+Skill 3: Gouged Petunia – Damage: 550–700 | Cooldown: 3 turns | Ultimate Effect: Takes 15% recoil damage and reduces own damage by 30% for 2 turns
+
+Tyrone is a Fire Sang’gre who was born in the kingdom of Hathoria and dreams of becoming known throughout the world of Encantadia. He wishes to grow strong to protect his kingdom and its people. Although the fire grew weaker after the ritual, Tyrone vowed to restore its strength and uncover the truth behind Joygen’s disappearance, embarking on a journey that would test his courage, skill, and heart.
+
+Base HP: 5000HP
+Skill 1: Fire Blaze – Damage: 260–340 | Cooldown: 0
+Skill 2: Fire Beam – Damage: 360–450 | Cooldown: 2 turns
+Skill 3: Fire Burst – Damage: 525–650 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 250
 
 (Main):
-Amihan (Air)
-  Born of the northern winds, Amihan commands the skies with grace and authority. Calm yet vigilant, she senses disturbances long before they manifest. The disappearance of Jelian haunts her, as whispers once carried by the wind now fall silent.
+Dea (Air)
+Born of the northern winds and nurtured by the whispers of the sky, Dea commands the currents with precision and foresight. Calm and observant, she senses disturbances across the realms long before they manifest. The disappearance of Jelian weighs heavily on her, as the winds now carry only silence where once they carried guidance.
 
-Base HP: 5000HP
-Skill 1: Wind Slash – Damage: 200–300 | Cooldown: 0
-Skill 2: Storm Fury – Damage: 150–250 | Cooldown: 2 turns
-Skill 3: Whirlwind – Damage: 400–600 | Cooldown: 3 turns | Ultimate effect: Incrementing opponents cooldown by 1 turn
+Base HP: 5000 HP
+Skill 1: Wind Slash – Damage: 220–300 | Cooldown: 0
+Skill 2: Storm Fury – Damage: 320–400 | Cooldown: 2 turns
+Skill 3: Whirlwind – Damage: 500–620 | Cooldown: 3 turns | Ultimate effect: Has a 45% chance of increasing opponents' cooldown by 1 turn
 
-Pirena (Fire)
-  Cursed with starlit fire, Perina’s strength burns brightest through will and passion. Joygen’s absence weakens her flames, yet fuels her resolve to rescue the goddess who once guided her control.
+Flamara (Fire)
+Gifted with flames born from starlit embers, Flamara’s fire burns with a fierce, unyielding passion. The absence of Joygen dims the brilliance of her power, yet it strengthens her resolve to rescue the goddess who once taught her the true mastery of fire.
 
-Base HP: 5000HP
-Skill 1: Fire ball – Damage: 300–400 | Cooldown: 0
-Skill 2: Flame burst – Damage: 350–500 | Cooldown: 2 turns
-Skill 3: Inferno Strike – Damage: 530–700 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 500
+Base HP: 5000 HP
+Skill 1: Fire Ball – Damage: 280–360 | Cooldown: 0
+Skill 2: Flame Burst – Damage: 380–480 | Cooldown: 2 turns
+Skill 3: Inferno Strike – Damage: 560–700 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 300
 
-Danaya (Earth)
-  Born from the first stone touched by sunlight, Danaya embodies endurance. The land cries out to her, fractured and unstable without Jelian’s guiding whispers.
+Tera (Earth)
+Tera was born from the first mountain stone kissed by dawn, embodying endurance and the unyielding spirit of the land. With Jelian missing, the earth cries out in instability, yet Tera’s steadfast nature ensures she remains the shield that guards against total collapse.
 
-Base HP: 5000HP
-Skill 1: Rock Smash – Damage: 250–350 | Cooldown: 0
-Skill 2: Earthquake – Damage: 200–300 | Cooldown: 2 turns
+Base HP: 5000 HP
+Skill 1: Rock Smash – Damage: 230–310 | Cooldown: 0
+Skill 2: Earthquake – Damage: 300–380 | Cooldown: 2 turns
 Skill 3: Nature's Wrath – Damage: 500–650 | Cooldown: 3 turns | Ultimate Effect: Has a healing effect of 300 HP
 
-Alena (Water)
-  Gifted with a voice that could soothe storms, Alena carries compassion shaped by betrayal and loss. The oceans mourn with her, reacting violently to Joygen’s absence, as fire and water lose their ancient harmony.
+Adamus (Water)
+Adamus, guardian of rivers and lakes, carries the voice of the oceans themselves. Shaped by betrayal and loss, he channels both compassion and power. The oceans wail in response to Joygen’s absence, yet Adamus remains resolute, determined to restore harmony to water and fire alike.
 
-Base HP: 5000HP
-Skill 1: Water Spear – Heal: 200–300 | Cooldown: 0
+Base HP: 5000 HP
+Skill 1: Water Spear – Heal: 220–300 | Cooldown: 0
 Skill 2: Ocean Wave – Heal: 300–450 | Cooldown: 2 turns
-Skill 3: Tsunami Blast – Heal: 600–700 | Cooldown: 3 turns | Ultimate Effect: Decreases all skill turns by 1, except skill 1
-
-
-
-
-
-
-
+Skill 3: Tsunami Blast – Heal: 600–650 | Cooldown: 3 turns | Ultimate Effect: Decreases all skill turns by 1, except skill 1
