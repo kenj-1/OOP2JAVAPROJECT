@@ -40,10 +40,15 @@ Makelan Shere, Devourer of the Crimson Bloom
 
 Base HP: 5000 HP
 Skill 1: Lead Heel – Damage: 200–290 | Cooldown: 0
-Skill 2: Savour Thy Flesh – Damage: 300–420 | Cooldown: 2 turns | Effect: Heals 10% of damage dealt
-Skill 3: Gouged Petunia – Damage: 500–750 | Cooldown: 3 turns | Effect: Takes 15% recoil damage and reduces own damage by 30% for 2 turns
+Skill 2: Savour Thy Flesh – Damage: 300–420 | Cooldown: 2 turns 
+Skill 3: Gouged Petunia – Damage: 500–750 | Cooldown: 3 turns | Ultimate Effect: Takes 15% recoil damage and reduces own damage by 30% for 2 turns
 
-// here
+Tyrone is a Fire Sang’gre who was born in the kingdom of Hathoria and dreams of becoming known throughout the world of Encantadia. He wishes to grow strong to protect his kingdom and its people. When Joygen, one of the greatest protectors of Hathoria, vanished during the ritual, Tyrone was shocked and saddened by the news. He believed that Joygen’s disappearance was no accident, but part of a greater plan. Inspired by his admiration for the protector, Tyrone was chosen by the Brilyante of Apoy. Although the fire grew weaker after the ritual, Tyrone vowed to restore its strength and uncover the truth behind Joygen’s disappearance, embarking on a journey that would test his courage, skill, and heart.
+
+Base HP: 5000HP
+Skill 1: Fire Blaze – Damage: 265–350 | Cooldown: 0
+Skill 2: Fire Beam – Damage: 375–450 | Cooldown: 2 turns
+Skill 3: Fire Burst – Damage: 475–650 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 300
 
 (Main):
 Dea (Air)
@@ -52,7 +57,7 @@ Born of the northern winds and nurtured by the whispers of the sky, Dea commands
 Base HP: 5000 HP
 Skill 1: Wind Slash – Damage: 200–300 | Cooldown: 0
 Skill 2: Storm Fury – Damage: 150–250 | Cooldown: 2 turns
-Skill 3: Whirlwind – Damage: 400–600 | Cooldown: 3 turns | Ultimate effect: Incrementing opponents cooldown by 1 turn
+Skill 3: Whirlwind – Damage: 400–600 | Cooldown: 3 turns | Ultimate effect: Has a 45% chance of increasing opponents cooldown by 1 turn
 
 Flamara (Fire)
 Gifted with flames born from starlit embers, Flamara’s fire burns with a fierce, unyielding passion. The absence of Joygen dims the brilliance of her power, yet it strengthens her resolve to rescue the goddess who once taught her the true mastery of fire.
@@ -60,7 +65,7 @@ Gifted with flames born from starlit embers, Flamara’s fire burns with a fierc
 Base HP: 5000 HP
 Skill 1: Fire Ball – Damage: 300–400 | Cooldown: 0
 Skill 2: Flame Burst – Damage: 350–500 | Cooldown: 2 turns
-Skill 3: Inferno Strike – Damage: 530–700 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 500
+Skill 3: Inferno Strike – Damage: 530–700 | Cooldown: 3 turns | Ultimate Effect: Throws additional damage of 300
 
 Tera (Earth)
 Tera was born from the first mountain stone kissed by dawn, embodying endurance and the unyielding spirit of the land. With Jelian missing, the earth cries out in instability, yet Tera’s steadfast nature ensures she remains the shield that guards against total collapse.
