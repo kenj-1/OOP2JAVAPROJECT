@@ -22,14 +22,14 @@ public class MainMenuFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1024, 768);
         setLocationRelativeTo(null);
-        setVisible(true);
+
 
 
         // Button Sides
         arcadeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                System.out.println("Arcade clicked");
                 new ArcadeMode();
                 dispose();
             }
@@ -62,6 +62,10 @@ public class MainMenuFrame extends JFrame {
                 System.exit(0);
             }
         });
+
+
+
+        setVisible(true);
     }
 
 }
