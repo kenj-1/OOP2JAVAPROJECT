@@ -5,58 +5,81 @@
 ## File Directory
 
 ```text
-Encantadia-Origins/
-│
+OOP2JAVAPROJECT/
+├── .idea/
+│   ├── .gitignore
+│   ├── misc.xml
+│   ├── modules.xml
+│   ├── uiDesigner.xml
+│   └── vcs.xml
+├── .vscode/
+│   └── settings.json
+├── OOP2JAVAPROJECT.iml
 ├── README.md
-├── .gitignore
-├── LICENSE
-│
-├── docs/
-│   ├── storyline.md
-│   ├── characters.md
-│   ├── mechanics.md
-│   └── ui-flow.md
-│
-├── src/
-│   └── encantadia/
-│       ├── Main.java
-│       │
-│       ├── ui/
-│       │   ├── MainMenuFrame.java
-│       │   ├── BattleFrame.java
-│       │   ├── CharacterSelectFrame.java
-│       │   └── ResultDialog.java
-│       │   └── gamemodeselection/
-│       │       ├── ArcadeMode/
-│       │       │   └──ArcadeMode.class
-│       │       │   └──ArcadeMode.form  
-│       │       ├── PVEMode/
-│       │       │    └── PVEMode.java
-│       │       │    └── PVEMode.form
-│       │       │
-│       │       └── PVPMode/
-│       │           └── PVPMode.java
-│       │           └── PVPMode.form
-│       ├── characters/
-│       │   ├── Character.java
-│       │   ├── Mary.java
-│       │   ├── Dirk.java
-│       │   ├── MakelanShere.java
-│       │   └── ...
-│       │
-│       ├── battle/
-│       │   ├── TurnManager.java
-│       │   ├── Skill.java
-│       │   ├── CooldownManager.java
-│       │   └── StatusEffect.java
-│       │
-│       └── utils/
-│           ├── Dice.java
-│           ├── InputValidator.java
-│           └── Constants.java
-│       
-│       
-│
-└── assets/
-    └── images/
-        └── (optional later)
+├── Storyline, Characters, Stats
+├── out/
+│   └── production/
+│       └── OOP2JAVAPROJECT/
+│           ├── com/
+│           │   └── intellij/
+│           │       └── uiDesigner/
+│           │           └── core/
+│           │               ├── AbstractLayout.class
+│           │               ├── DimensionInfo.class
+│           │               ├── GridConstraints.class
+│           │               ├── GridLayoutManager.class
+│           │               ├── HorizontalInfo.class
+│           │               ├── LayoutState.class
+│           │               ├── Spacer.class
+│           │               ├── SupportCode$TextWithMnemonic.class
+│           │               ├── SupportCode.class
+│           │               ├── Util.class
+│           │               └── VerticalInfo.class
+│           └── encantadia/
+│               ├── Main.class
+│               └── ui/
+│                   └── ux/
+│                       ├── MainMenuFrame$1.class
+│                       └── MainMenuFrame.class
+└── src/
+    └── encantadia/
+        ├── Main.class
+        ├── Main.java
+        ├── battle/
+        │   ├── CooldownManager.java
+        │   ├── Skill.java
+        │   ├── StatusEffect.java
+        │   ├── TurnManager.java
+        │   └── TurnResult.java
+        ├── characters/
+        │   ├── Adamus.java
+        │   ├── Character.java
+        │   ├── Dea.java
+        │   ├── Dirk.java
+        │   ├── Flamara.java
+        │   ├── MakelanShere.java
+        │   ├── Mary.java
+        │   ├── Tera.java
+        │   └── Tyrone.java
+        └── ui/
+            └── ux/
+                ├── BattleFrame.form
+                ├── BattleFrame.java
+                ├── CharacterSelectionFrame.form
+                ├── CharacterSelectionFrame.java
+                ├── MainMenuFrame.class
+                ├── MainMenuFrame.form
+                ├── MainMenuFrame.java
+                ├── ResultDialogFrame.form
+                ├── ResultDialogFrame.java
+                ├── StorylineDialogBox.form
+                ├── StorylineDialogBox.java
+                ├── WelcomeScreenPage.form
+                ├── WelcomeScreenPage.java
+                └── gamemodeselection/
+                    ├── ArcadeMode.form
+                    ├── ArcadeMode.java
+                    ├── PVEMode.form
+                    ├── PVEMode.java
+                    ├── PVPMode.form
+                    └── PVPMode.java
