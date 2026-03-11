@@ -44,6 +44,8 @@ public class TurnResult {
         this.logMessages        = List.copyOf(b.logMessages);
     }
 
+
+
     // ── Getters ──────────────────────────────────────────────
 
     public String getAttackerName()      { return attackerName; }
