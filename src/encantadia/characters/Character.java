@@ -47,4 +47,5 @@ public abstract class Character {
     public String getBackstory()    { return backstory; }
     public int getCurrentHP()       { return currentHP; }
     public int getMaxHP()           { return maxHP; }   // ← required by TurnManager
+
 }

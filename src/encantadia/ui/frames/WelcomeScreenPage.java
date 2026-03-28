@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.net.URL;
 import encantadia.BackstoryShowcase;
+import encantadia.ScreenManager;
 import encantadia.story.StoryType;
 
 public class WelcomeScreenPage extends JFrame {
@@ -55,9 +56,9 @@ public class WelcomeScreenPage extends JFrame {
 
         buttonsPanel.add(Box.createVerticalGlue());
         buttonsPanel.add(centerButton(playButton));
-        buttonsPanel.add(Box.createVerticalStrut(14));
+        buttonsPanel.add(Box.createVerticalStrut(25));
         buttonsPanel.add(centerButton(optionButton));
-        buttonsPanel.add(Box.createVerticalStrut(14));
+        buttonsPanel.add(Box.createVerticalStrut(25));
         buttonsPanel.add(centerButton(exitButton));
         buttonsPanel.add(Box.createVerticalGlue());
 
@@ -87,11 +88,16 @@ public class WelcomeScreenPage extends JFrame {
         exitButton.addActionListener(e -> System.exit(0));
 
         setVisible(true);
-
+        ScreenManager.register(this);
         // ✅ Reposition after frame has real dimensions
         SwingUtilities.invokeLater(() ->
                 repositionLayers(layeredPane, bgPanel, titlePanel, buttonsPanel)
         );
+    }
+    @Override
+    public void dispose() {
+        ScreenManager.unregister(this);
+        super.dispose();
     }
 
     // ── Layer positioning ─────────────────────────────────────
@@ -107,16 +113,17 @@ public class WelcomeScreenPage extends JFrame {
         // Background fills everything
         bg.setBounds(0, 0, w, h);
 
-        // Title: upper-center, 55% of frame width
+        // Title: upper-center
         int titleW = (int)(w * 0.55);
-        int titleH = (int)(titleW * 0.30); // ratio matches the gameTitle.png proportions
+        int titleH = (int)(titleW * 0.30);
         int titleX = (w - titleW) / 2;
-        int titleY = (int)(h * 0.15);
+        int titleY = (int)(h * 0.05);
         title.setBounds(titleX, titleY, titleW, titleH);
 
-        // Buttons: scale to frame
-        int btnW = (int)(w * 0.26);
-        int btnH = (int)(btnW * 0.20);
+        // Button sizing
+        int btnH   = (int)(h * 0.10);
+        int btnW   = (int)(btnH * 4.5);
+        int btnGap = (int)(h * 0.06);   // ✅ bigger gap — was 0.025, now 0.06
 
         playButton.setPreferredSize(new Dimension(btnW, btnH));
         playButton.setMaximumSize(new Dimension(btnW, btnH));
@@ -125,12 +132,25 @@ public class WelcomeScreenPage extends JFrame {
         exitButton.setPreferredSize(new Dimension(btnW, btnH));
         exitButton.setMaximumSize(new Dimension(btnW, btnH));
 
-        // Buttons panel: centered in lower half
-        int btnGap     = 14;
-        int btnPanelH  = (btnH * 3) + (btnGap * 2) + 20;
-        int btnPanelW  = btnW + 20;
-        int btnPanelX  = (w - btnPanelW) / 2;
-        int btnPanelY  = (int)(h * 0.52);
+        int btnPanelH = (btnH * 3) + (btnGap * 2) + 10;
+        int btnPanelW = btnW + 40;
+        int btnPanelX = (w - btnPanelW) / 2;
+
+        // ✅ Also update the BoxLayout struts to match the new gap
+        buttons.removeAll();
+        buttons.add(Box.createVerticalGlue());
+        buttons.add(centerButton(playButton));
+        buttons.add(Box.createVerticalStrut(btnGap));
+        buttons.add(centerButton(optionButton));
+        buttons.add(Box.createVerticalStrut(btnGap));
+        buttons.add(centerButton(exitButton));
+        buttons.add(Box.createVerticalGlue());
+
+        // Center panel between 58% and 97% of frame height
+        int zoneTop   = (int)(h * 0.58);
+        int zoneBottom = (int)(h * 0.97);
+        int btnPanelY = zoneTop + (zoneBottom - zoneTop - btnPanelH) / 2;
+
         buttons.setBounds(btnPanelX, btnPanelY, btnPanelW, btnPanelH);
 
         buttons.revalidate();
@@ -188,8 +208,8 @@ public class WelcomeScreenPage extends JFrame {
         };
 
         btn.setText(fallbackText);
-        btn.setPreferredSize(new Dimension(260, 52));
-        btn.setMaximumSize(new Dimension(260, 52));
+        btn.setPreferredSize(new Dimension(400, 300));
+        btn.setMaximumSize(new Dimension(400, 300));
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
         btn.setContentAreaFilled(false);

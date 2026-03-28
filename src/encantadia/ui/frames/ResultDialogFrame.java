@@ -78,6 +78,7 @@ public class ResultDialogFrame extends JDialog {
                 onReady
         );
         dialog.setVisible(true);
+
     }
 
     /**
@@ -180,6 +181,7 @@ public class ResultDialogFrame extends JDialog {
 
         return panel;
     }
+
 
     // ── Center: portraits + scoreboard ───────────────────────
 

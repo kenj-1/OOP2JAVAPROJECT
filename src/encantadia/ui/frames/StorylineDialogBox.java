@@ -1,5 +1,6 @@
 package encantadia.ui.frames;
 
+import encantadia.ScreenManager;
 import encantadia.characters.Character;
 
 import javax.swing.*;
@@ -102,8 +103,13 @@ public class StorylineDialogBox extends JFrame {
         });
 
         setVisible(true);
-
+        ScreenManager.register(this);
         startPlayerStory();
+    }
+    @Override
+    public void dispose() {
+        ScreenManager.unregister(this);
+        super.dispose();
     }
 
     private ImageIcon loadCharacterImage(Character c){

@@ -1,55 +1,15 @@
 package encantadia.gamemode;
 
-import encantadia.ui.frames.CharacterSelectionFrame;
-import encantadia.ui.frames.MainMenuFrame;
+import encantadia.story.StoryType;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+public class PVPMode extends BaseModeScreen {
 
-public class PVPMode extends JFrame {
+    private static final String BG_PATH = "/resources/background (2).png";
 
-    private JPanel pvpModePanelReal;
-    private JButton yesButton;
-    private JButton noButton;
-    private JButton backToMainMenuButton;
+    public PVPMode() { init(); }
 
-
-    public PVPMode() {
-        setContentPane(pvpModePanelReal);
-        setTitle("Encantadia: Echoes of the Gem - PVP Mode");
-        setSize(1024, 768);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
-        noButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    new CharacterSelectionFrame();
-                    dispose();
-                } catch (Exception ex) {
-                    ex.printStackTrace(); // check the Run console for the real error
-                }
-            }
-        });
-        backToMainMenuButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                new MainMenuFrame();
-                dispose();
-            }
-        });
-        yesButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-
-            }
-        });
-
-        setVisible(true);
-    }
+    @Override protected String       getBackgroundPath() { return BG_PATH; }
+    @Override protected String       getWindowTitle()    { return "Encantadia: Echoes of the Gem — PVP Mode"; }
+    @Override protected StoryType    getStoryType()      { return StoryType.PVP_LORE; }
+    @Override protected GameModeType getGameModeType()   { return GameModeType.PVP; }
 }

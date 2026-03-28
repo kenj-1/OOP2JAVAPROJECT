@@ -1,57 +1,15 @@
 package encantadia.gamemode;
 
-import encantadia.ui.frames.CharacterSelectionFrame;
-import encantadia.ui.frames.MainMenuFrame;
+import encantadia.story.StoryType;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+public class ArcadeMode extends BaseModeScreen {
 
-public class ArcadeMode extends JFrame {
+    private static final String BG_PATH = "/resources/background (2).png";
 
-    private JPanel arcadeModePanel;
-    private JButton backToMainMenuButton;
-    private JButton noButton;
-    private JButton yesButton;
+    public ArcadeMode() { init(); }
 
-    public ArcadeMode() {
-
-        setContentPane(arcadeModePanel);
-        setTitle("Encantadia: Echoes of the Gem - Arcade Mode");
-        setSize(1024, 768);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Back to Main Menu
-        backToMainMenuButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new MainMenuFrame();
-                dispose();
-            }
-        });
-
-        // YES button
-        yesButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(ArcadeMode.this,
-                        "Arcade Mode Starting...");
-                new CharacterSelectionFrame();
-                dispose();
-            }
-
-        });
-
-        // NO button
-        noButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(ArcadeMode.this,
-                        "Arcade Mode Cancelled.");
-            }
-        });
-
-        setVisible(true);
-    }
+    @Override protected String       getBackgroundPath() { return BG_PATH; }
+    @Override protected String       getWindowTitle()    { return "Encantadia: Echoes of the Gem — Arcade Mode"; }
+    @Override protected StoryType    getStoryType()      { return StoryType.ARCADE_LORE; }
+    @Override protected GameModeType getGameModeType()   { return GameModeType.ARCADE; }
 }
