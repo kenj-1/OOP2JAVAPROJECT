@@ -87,6 +87,7 @@ public class PVEBattleFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         buildUI();
+        registerHotkeys();
         setVisible(true);
         ScreenManager.register(this);
 
@@ -94,6 +95,37 @@ public class PVEBattleFrame extends JFrame {
         showRoundAnnouncement(currentRound);
         log("⚔  Round "+currentRound+" — First to "+ROUNDS_TO_WIN+" wins!");
         log(playerCharacter.getName()+"  vs  "+enemyCharacter.getName());
+
+    }
+
+    private void registerHotkeys() {
+        JComponent root = (JComponent) getContentPane();
+        InputMap  im = root.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+        ActionMap am = root.getActionMap();
+
+        // Map key → skill index
+        Object[][] bindings = {
+                { KeyEvent.VK_A, 0, "pve_skill_0" },
+                { KeyEvent.VK_S, 1, "pve_skill_1" },
+                { KeyEvent.VK_D, 2, "pve_skill_2" },
+        };
+
+        for (Object[] b : bindings) {
+            int     keyCode = (int) b[0];
+            int     si      = (int) b[1];
+            String  id      = (String) b[2];
+
+            im.put(KeyStroke.getKeyStroke(keyCode, 0, false), id);
+            am.put(id, new AbstractAction() {
+                @Override public void actionPerformed(java.awt.event.ActionEvent e) {
+                    // Only fire if the button is currently enabled (same guard as mouse click)
+                    if (si < skillBtns.length && skillBtns[si] != null
+                            && skillBtns[si].isEnabled()) {
+                        onPlayerSkill(si);
+                    }
+                }
+            });
+        }
     }
 
     @Override

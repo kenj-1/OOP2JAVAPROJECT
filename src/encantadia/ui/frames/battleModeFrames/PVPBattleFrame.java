@@ -320,6 +320,7 @@ public class PVPBattleFrame extends JFrame {
         skillsLayer = new JPanel(null);
         skillsLayer.setOpaque(false);
         buildSkillsLayer();
+        registerHotkeys(lp);
         lp.add(skillsLayer, JLayeredPane.MODAL_LAYER);
 
         // Layer 3: round announcement overlay
@@ -344,7 +345,52 @@ public class PVPBattleFrame extends JFrame {
         });
         return wrapper;
     }
+    private void registerHotkeys(JComponent battleRoot) {
+        InputMap  im = battleRoot.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+        ActionMap am = battleRoot.getActionMap();
 
+        // ── Player 1 bindings (A / S / D) ────────────────────────────────────
+        int[][] p1Keys = {
+                { KeyEvent.VK_A, 0 },
+                { KeyEvent.VK_S, 1 },
+                { KeyEvent.VK_D, 2 },
+        };
+        for (int[] kb : p1Keys) {
+            int keyCode = kb[0];
+            int si      = kb[1];
+            String id   = "pvp_p1_skill_" + si;
+            im.put(KeyStroke.getKeyStroke(keyCode, 0, false), id);
+            am.put(id, new AbstractAction() {
+                @Override public void actionPerformed(java.awt.event.ActionEvent e) {
+                    if (si < p1SkillBtns.length && p1SkillBtns[si] != null
+                            && p1SkillBtns[si].isEnabled()) {
+                        onP1Skill(si);
+                    }
+                }
+            });
+        }
+
+        // ── Player 2 bindings (Numpad 1 / 2 / 3) ─────────────────────────────
+        int[][] p2Keys = {
+                { KeyEvent.VK_NUMPAD1, 0 },
+                { KeyEvent.VK_NUMPAD2, 1 },
+                { KeyEvent.VK_NUMPAD3, 2 },
+        };
+        for (int[] kb : p2Keys) {
+            int keyCode = kb[0];
+            int si      = kb[1];
+            String id   = "pvp_p2_skill_" + si;
+            im.put(KeyStroke.getKeyStroke(keyCode, 0, false), id);
+            am.put(id, new AbstractAction() {
+                @Override public void actionPerformed(java.awt.event.ActionEvent e) {
+                    if (si < p2SkillBtns.length && p2SkillBtns[si] != null
+                            && p2SkillBtns[si].isEnabled()) {
+                        onP2Skill(si);
+                    }
+                }
+            });
+        }
+    }
     private void buildSkillsLayer() {
         List<Skill> s1 = player1.getSkills();
         List<Skill> s2 = player2 != null ? player2.getSkills() : List.of();

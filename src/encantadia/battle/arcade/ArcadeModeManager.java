@@ -41,6 +41,7 @@ public class ArcadeModeManager {
             Character boss = q.get(q.size() - 1);
             boss.increaseMaxHP(3000);
         }
+
         return q;
     }
 

@@ -37,6 +37,7 @@ public class ArcadeModeBattleFrame extends JFrame {
     // ── Resources ─────────────────────────────────────────────
     private static final String BG_PATH          = "/resources/backgroundArcade.png";
     private static final int    ENEMY_TURN_DELAY  = 1100;
+    private boolean ultimateUnlocked = false;
 
     private static final String[] FRAME_IMGS = {
             "/resources/tyroneFrame (1).png", "/resources/elanFrame (1).png",
@@ -104,6 +105,7 @@ public class ArcadeModeBattleFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         buildUI(isBoss, idx, total);
+        registerHotkeys();
         setVisible(true);
         ScreenManager.register(this);
 
@@ -422,6 +424,7 @@ public class ArcadeModeBattleFrame extends JFrame {
             btn.setAlignmentX(Component.CENTER_ALIGNMENT);
             btn.addActionListener(e -> {
                 playerCharacter.addSkill(skill);
+                ultimateUnlocked = true;        // ← ADD THIS LINE
                 rebuildSkillSlots();
                 log("🔥  Ultimate unlocked: " + skill.getName() + "!");
                 overlayLayer.setVisible(false); overlayLayer.removeAll();
@@ -472,7 +475,44 @@ public class ArcadeModeBattleFrame extends JFrame {
         Collections.shuffle(pool);
         return pool.subList(0, Math.min(3, pool.size()));
     }
+    private void registerHotkeys() {
+        JComponent root = (JComponent) getContentPane();
+        InputMap  im = root.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+        ActionMap am = root.getActionMap();
 
+        // ── A / S / D — core three skills ────────────────────────────────────
+        int[][] coreKeys = {
+                { KeyEvent.VK_A, 0 },
+                { KeyEvent.VK_S, 1 },
+                { KeyEvent.VK_D, 2 },
+        };
+        for (int[] kb : coreKeys) {
+            int keyCode = kb[0];
+            int si      = kb[1];
+            String id   = "arc_skill_" + si;
+            im.put(KeyStroke.getKeyStroke(keyCode, 0, false), id);
+            am.put(id, new AbstractAction() {
+                @Override public void actionPerformed(java.awt.event.ActionEvent e) {
+                    if (si < skillBtns.length && skillBtns[si] != null
+                            && skillBtns[si].isEnabled()) {
+                        onPlayerSkill(si);
+                    }
+                }
+            });
+        }
+
+        // ── F — 4th skill slot (inactive until ultimate is unlocked) ─────────
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_F, 0, false), "arc_skill_3");
+        am.put("arc_skill_3", new AbstractAction() {
+            @Override public void actionPerformed(java.awt.event.ActionEvent e) {
+                // Guard: do nothing if ultimate not yet unlocked
+                if (!ultimateUnlocked) return;
+                if (skillBtns[3] != null && skillBtns[3].isEnabled()) {
+                    onPlayerSkill(3);
+                }
+            }
+        });
+    }
     // ── Overlay widget builders ───────────────────────────────
     private JPanel makeDim() {
         JPanel dim = new JPanel() {
