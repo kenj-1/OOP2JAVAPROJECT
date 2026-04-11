@@ -83,9 +83,18 @@ public class ArcadeLorePromptFrame extends JFrame {
 
         yesBtn.addActionListener(e -> {
             dispose();
-            new BackstoryShowcase(ARCADE_LORE, "The Ancient Arenas",
-                    () -> new CharacterSelectionFrame(GameModeType.ARCADE));
+            new BackstoryShowcase(
+                    ARCADE_LORE,
+                    "The Ancient Arenas",
+
+                    // Begin / Finish
+                    () -> new CharacterSelectionFrame(GameModeType.ARCADE),
+
+                    // Back → go to main menu
+                    () -> new encantadia.ui.frames.MainMenuFrame()
+            );
         });
+
         noBtn.addActionListener(e -> {
             dispose();
             new CharacterSelectionFrame(GameModeType.ARCADE);
