@@ -18,21 +18,21 @@ import java.awt.event.*;
 import java.net.URL;
 
 public class CharacterSelectionFrame extends JFrame {
-
+    public static int FRAME_SIZE = 800;
     private final GameModeType gameModeType;
-
     private static final String BG_PATH    = "/resources/background (4).png";
     private static final String TITLE_PATH = "/resources/chooseSangreTitle.png";
+    private JButton exitButton;
 
     private static final String[] FRAME_IMGS = {
-            "/resources/tyroneFrame (1).png",
-            "/resources/elanFrame (1).png",
-            "/resources/claireFrame (1).png",
-            "/resources/dirkFrame (1).png",
-            "/resources/flamaraFrame (1).png",
-            "/resources/deaFrame (1).png",
-            "/resources/adamusFrame (1).png",
-            "/resources/teraFrame (1).png"
+            "/resources/TyroneFrameName.png",
+            "/resources/ElanFrameName.png",
+            "/resources/ClaireFrameName.png",
+            "/resources/DirkFrameName.png",
+            "/resources/FlamaraFrameName.png",
+            "/resources/DeaFrameName.png",
+            "/resources/AdamusFrameName.png",
+            "/resources/TeraFrameName.png"
     };
     private static final String[] CHAR_NAMES = {
             "Tyrone", "Elan", "Claire", "Dirk",
@@ -66,6 +66,7 @@ public class CharacterSelectionFrame extends JFrame {
     public CharacterSelectionFrame() { this(GameModeType.PVE); }
 
     private void init() {
+
         setTitle("Choose Your Sangre  [" + gameModeType.name() + "]");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1024, 768);
@@ -127,6 +128,26 @@ public class CharacterSelectionFrame extends JFrame {
         setVisible(true);
         ScreenManager.register(this);
         SwingUtilities.invokeLater(() -> reposition(lp));
+
+        exitButton = new JButton();
+        ImageIcon exitIcon = new ImageIcon(getClass().getResource("/resources/exitButton (1).png"));
+        Image img = exitIcon.getImage();
+        exitButton.setIcon(exitIcon);
+
+        // Remove default button styling
+                exitButton.setContentAreaFilled(false);
+                exitButton.setBorderPainted(false);
+                exitButton.setFocusPainted(false);
+                exitButton.setOpaque(false);
+                exitButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+        // Click action → go to Main Menu
+                exitButton.addActionListener(e -> {
+                    dispose();
+                    new MainMenuFrame();
+                });
+
+                lp.add(exitButton, JLayeredPane.POPUP_LAYER);
     }
 
     @Override
@@ -153,7 +174,7 @@ public class CharacterSelectionFrame extends JFrame {
         int titleY = (int)(30 * scale);
         titlePanel.setBounds(titleX, titleY, titleW, titleH);
 
-        // Grid — frame images are square-ish, no separate name label
+        // OUTER FRAME SIZE
         int cellW = (int)(150 * scale);
         int cellH = (int)(150 * scale);
         int gapX  = (int)(36 * scale);
@@ -173,6 +194,18 @@ public class CharacterSelectionFrame extends JFrame {
             baseY[i] = fy;
         }
 
+        int exitW = (int)(140 * scale);
+        int exitH = (int)(50 * scale);
+
+        int exitX = (W - exitW) / 2;
+        int exitY = gridY + (2 * cellH) + (int)(gapY * scale) + (int)(50 * scale);
+
+        exitButton.setBounds(exitX, exitY, exitW, exitH);
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("/resources/exitButton (1).png"));
+        Image scaledImg = originalIcon.getImage().getScaledInstance(exitW, exitH, Image.SCALE_SMOOTH);
+        exitButton.setIcon(new ImageIcon(scaledImg));
+
+
         pane.revalidate();
         pane.repaint();
     }
@@ -191,27 +224,45 @@ public class CharacterSelectionFrame extends JFrame {
 
     private void startPVEFlow(Character character) {
         Character enemy = EnemyFactory.getRandomEnemy(character);
-        Runnable launchBattle   = () -> new PVEBattleFrame(character, enemy);
+
+        Runnable launchBattle = () -> new PVEBattleFrame(character, enemy);
+
         Runnable showEnemyStory = () -> new BackstoryShowcase(
                 CharacterStories.getEnemyStory(enemy),
-                CharacterStories.getEnemyTitle(enemy), launchBattle);
+                CharacterStories.getEnemyTitle(enemy),
+                launchBattle,
+                () -> new CharacterSelectionFrame(GameModeType.PVE)
+        );
+
         new BackstoryShowcase(
                 CharacterStories.getCharacterStory(character),
-                CharacterStories.getCharacterTitle(character), showEnemyStory);
+                CharacterStories.getCharacterTitle(character),
+                showEnemyStory,
+                () -> new CharacterSelectionFrame(GameModeType.PVE)
+        );
     }
 
     private void startPVPFlow(Character character) {
-        Runnable launchBattle = () -> new PVPBattleFrame(character);
+
+        Runnable goToP2Selection = () -> new PVPBattleFrame(character);
+
         new BackstoryShowcase(
                 CharacterStories.getCharacterStory(character),
-                CharacterStories.getCharacterTitle(character), launchBattle);
+                CharacterStories.getCharacterTitle(character),
+                goToP2Selection,
+                () -> new CharacterSelectionFrame(GameModeType.PVP)
+        );
     }
 
     private void startArcadeFlow(Character character) {
         Runnable launchTower = () -> new ArcadeTowerFrame(character, new ArcadeModeManager(character));
+
         new BackstoryShowcase(
                 CharacterStories.getCharacterStory(character),
-                CharacterStories.getCharacterTitle(character), launchTower);
+                CharacterStories.getCharacterTitle(character),
+                launchTower,
+                () -> new CharacterSelectionFrame(GameModeType.ARCADE)
+        );
     }
 
     private Character[] buildRoster() {
@@ -260,6 +311,8 @@ public class CharacterSelectionFrame extends JFrame {
 
         void setHovered(boolean h) { this.hovered = h; }
 
+
+
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
@@ -291,20 +344,35 @@ public class CharacterSelectionFrame extends JFrame {
                 }
             }
 
-            // ── Image: scale up slightly on hover ─────────────
             float sc = hovered ? 1.08f : 1.0f;
-            int drawW = (int)(W * sc);
-            int drawH = (int)(H * sc);
-            int drawX = (W - drawW) / 2;
-            int drawY = (H - drawH) / 2;
 
             if (frameImg != null) {
+
+                int iw = frameImg.getWidth(null);
+                int ih = frameImg.getHeight(null);
+
+                int targetW = CharacterSelectionFrame.FRAME_SIZE;
+
+                double scale = ((double) targetW / iw) * sc;
+
+                int drawW = (int)(iw * scale);
+                int drawH = (int)(ih * scale);
+
+                int drawX = (W - drawW) / 2;
+                int drawY = (H - drawH) / 2;
+
                 g2.drawImage(frameImg, drawX, drawY, drawW, drawH, null);
+
             } else {
+                int drawW = 200;
+                int drawH = 200;
+
+                int drawX = (W - drawW) / 2;
+                int drawY = (H - drawH) / 2;
+
                 g2.setColor(new Color(60, 50, 30));
                 g2.fillRoundRect(drawX, drawY, drawW, drawH, 12, 12);
             }
-
             // ── Name tooltip on hover (inside panel, bottom) ──
             if (glowAlpha > 0.05f) {
                 int fontSize = Math.max(10, (int)(H * 0.13));
